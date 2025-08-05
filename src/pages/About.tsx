@@ -1,8 +1,11 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Target, Eye, Award, Calendar, Users, Globe2, Microscope, Heart } from 'lucide-react';
+import { Target, Eye, Award, Calendar, Users, Globe2, Microscope, Heart, FlaskConical, Building2, UserCheck, Star, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import labResearch from '@/assets/lab-research.jpg';
+import labManufacturing from '@/assets/lab-manufacturing.jpg';
+import teamLeadership from '@/assets/team-leadership.jpg';
 
 const About = () => {
   const milestones = [
@@ -260,6 +263,274 @@ const About = () => {
                   </Card>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Research Facilities Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">World-Class Research Facilities</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Our state-of-the-art laboratories and manufacturing facilities enable breakthrough pharmaceutical innovations.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <Card className="overflow-hidden hover:shadow-medium transition-all duration-300">
+              <div className="aspect-video overflow-hidden">
+                <img 
+                  src={labResearch} 
+                  alt="Advanced Research Laboratory"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <FlaskConical className="h-5 w-5 text-primary" />
+                  Advanced Research Centers
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-base mb-4">
+                  Our 15 research centers worldwide are equipped with cutting-edge technology for drug discovery, 
+                  development, and testing, supporting our commitment to pharmaceutical excellence.
+                </CardDescription>
+                <div className="grid grid-cols-2 gap-4 text-sm">
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-success flex-shrink-0" />
+                    <span>15 Global Research Centers</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-success flex-shrink-0" />
+                    <span>500+ Research Scientists</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-success flex-shrink-0" />
+                    <span>Advanced AI Drug Discovery</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-success flex-shrink-0" />
+                    <span>Biosafety Level 3 Labs</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-medium transition-all duration-300">
+              <div className="aspect-video overflow-hidden">
+                <img 
+                  src={labManufacturing} 
+                  alt="GMP Manufacturing Facility"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Building2 className="h-5 w-5 text-accent" />
+                  Manufacturing Excellence
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-base mb-4">
+                  Our GMP-certified manufacturing facilities across multiple continents ensure consistent quality 
+                  and global supply chain reliability for all our pharmaceutical products.
+                </CardDescription>
+                <div className="grid grid-cols-2 gap-4 text-sm">
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-success flex-shrink-0" />
+                    <span>8 Manufacturing Sites</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-success flex-shrink-0" />
+                    <span>ISO 13485 Certified</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-success flex-shrink-0" />
+                    <span>24/7 Quality Monitoring</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-success flex-shrink-0" />
+                    <span>Zero Waste Initiative</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-12 text-center">
+            <Card className="max-w-4xl mx-auto">
+              <CardContent className="p-8">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+                  <div>
+                    <div className="text-3xl font-bold text-primary mb-2">$2.5B</div>
+                    <p className="text-sm text-muted-foreground">Annual R&D Investment</p>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-bold text-accent mb-2">200+</div>
+                    <p className="text-sm text-muted-foreground">Patents Registered</p>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-bold text-success mb-2">98%</div>
+                    <p className="text-sm text-muted-foreground">Quality Compliance Rate</p>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-bold text-warning mb-2">15</div>
+                    <p className="text-sm text-muted-foreground">Awards This Year</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Leadership Team Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Executive Leadership</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Meet the visionary leaders driving our mission to transform global healthcare through pharmaceutical innovation.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+            <div className="lg:col-span-2">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <Card className="hover:shadow-medium transition-all duration-300">
+                  <CardHeader>
+                    <div className="flex items-center gap-4">
+                      <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
+                        <UserCheck className="h-8 w-8 text-primary" />
+                      </div>
+                      <div>
+                        <CardTitle className="text-lg">Dr. Sarah Chen</CardTitle>
+                        <CardDescription>Chief Scientific Officer</CardDescription>
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground mb-3">
+                      Leading our global research initiatives with over 20 years of experience in pharmaceutical development and regulatory sciences.
+                    </p>
+                    <div className="space-y-1 text-xs text-muted-foreground">
+                      <div>• PhD in Molecular Biology, Harvard</div>
+                      <div>• Former FDA Advisory Committee Member</div>
+                      <div>• 50+ Peer-reviewed Publications</div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="hover:shadow-medium transition-all duration-300">
+                  <CardHeader>
+                    <div className="flex items-center gap-4">
+                      <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center">
+                        <Microscope className="h-8 w-8 text-accent" />
+                      </div>
+                      <div>
+                        <CardTitle className="text-lg">Dr. Michael Rodriguez</CardTitle>
+                        <CardDescription>Head of Research & Development</CardDescription>
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground mb-3">
+                      Spearheading breakthrough research in molecular therapeutics and personalized medicine approaches.
+                    </p>
+                    <div className="space-y-1 text-xs text-muted-foreground">
+                      <div>• PhD in Biochemistry, MIT</div>
+                      <div>• 15 Patents in Drug Discovery</div>
+                      <div>• Expert in AI-driven Drug Design</div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="hover:shadow-medium transition-all duration-300">
+                  <CardHeader>
+                    <div className="flex items-center gap-4">
+                      <div className="w-16 h-16 bg-success/10 rounded-full flex items-center justify-center">
+                        <Award className="h-8 w-8 text-success" />
+                      </div>
+                      <div>
+                        <CardTitle className="text-lg">Lisa Thompson</CardTitle>
+                        <CardDescription>VP Quality Assurance</CardDescription>
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground mb-3">
+                      Ensuring world-class quality standards across all operations and maintaining regulatory compliance globally.
+                    </p>
+                    <div className="space-y-1 text-xs text-muted-foreground">
+                      <div>• MS in Quality Management</div>
+                      <div>• 18 Years in Pharmaceutical QA</div>
+                      <div>• Six Sigma Black Belt</div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="hover:shadow-medium transition-all duration-300">
+                  <CardHeader>
+                    <div className="flex items-center gap-4">
+                      <div className="w-16 h-16 bg-warning/10 rounded-full flex items-center justify-center">
+                        <Globe2 className="h-8 w-8 text-warning" />
+                      </div>
+                      <div>
+                        <CardTitle className="text-lg">James Park</CardTitle>
+                        <CardDescription>Global Operations Director</CardDescription>
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground mb-3">
+                      Managing international operations and supply chain optimization across our global network of facilities.
+                    </p>
+                    <div className="space-y-1 text-xs text-muted-foreground">
+                      <div>• MBA in International Business</div>
+                      <div>• 22 Years in Global Operations</div>
+                      <div>• Expert in Supply Chain Strategy</div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+
+            <div className="lg:col-span-1">
+              <Card className="overflow-hidden sticky top-8">
+                <div className="aspect-[3/4] overflow-hidden">
+                  <img 
+                    src={teamLeadership} 
+                    alt="Healup Pharma Leadership Team"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <CardContent className="p-6">
+                  <div className="space-y-4">
+                    <h3 className="text-xl font-semibold">Leadership Excellence</h3>
+                    <p className="text-muted-foreground text-sm">
+                      Our executive team combines over 75 years of pharmaceutical industry experience, 
+                      driving innovation and maintaining the highest standards of excellence in everything we do.
+                    </p>
+                    <div className="space-y-2 text-sm">
+                      <div className="flex items-center gap-2">
+                        <Star className="h-4 w-4 text-warning fill-current" />
+                        <span className="text-muted-foreground">75+ Years Combined Experience</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Award className="h-4 w-4 text-success" />
+                        <span className="text-muted-foreground">Industry Leadership Awards</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Globe2 className="h-4 w-4 text-primary" />
+                        <span className="text-muted-foreground">Global Healthcare Impact</span>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
